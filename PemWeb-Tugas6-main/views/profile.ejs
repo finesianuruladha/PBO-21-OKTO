@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <h2>Welcome, <%= user.username %></h2>
+    <p>Email: <%= user.email %></p>
+    
+    <% if (user.address || user.phone || user.birthdate || user.city) { %>
+        <p>Address: <%= user.address %></p>
+        <p>Phone: <%= user.phone %></p>
+        <p>Birthdate: <%= user.birthdate %></p>
+        <p>City: <%= user.city %></p>
+    <% } %>
+
+    <form action="/profile/add" method="post">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="birthdate">Birthdate</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" required>
+
+        <button type="submit">Add Details</button>
+    </form>
+
+    <a href="/auth/logout">Logout</a>
+</body>
+</html>

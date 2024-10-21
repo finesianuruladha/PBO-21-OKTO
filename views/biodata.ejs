@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css"> <!-- Sesuaikan dengan nama file CSS Anda -->
+    <title>Biodata</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Biodata</h2>
+        <p>Username: <%= user.username %></p>
+        <p>Email: <%= user.email %></p>
+        <p>Address: <%= user.address || 'Not provided' %></p>
+        <p>Phone: <%= user.phone || 'Not provided' %></p>
+        <p>Birthdate: <%= user.birthdate || 'Not provided' %></p>
+        <p>City: <%= user.city || 'Not provided' %></p>
+
+        <!-- Link kembali ke halaman profil -->
+        <a href="/auth/profile">Back to Profile</a>
+    </div> 
+</body>
+</html>
